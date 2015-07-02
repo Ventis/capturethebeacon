@@ -13,6 +13,14 @@
 		7B53869C1B42CC6C00F40D90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B53869B1B42CC6C00F40D90 /* Images.xcassets */; };
 		7B53869F1B42CC6C00F40D90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B53869D1B42CC6C00F40D90 /* LaunchScreen.xib */; };
 		7B5386AB1B42CC6C00F40D90 /* CaptureTheBeaconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5386AA1B42CC6C00F40D90 /* CaptureTheBeaconTests.swift */; };
+		7B5386BE1B42CC8500F40D90 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5386BD1B42CC8500F40D90 /* InterfaceController.swift */; };
+		7B5386C01B42CC8500F40D90 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5386BF1B42CC8500F40D90 /* NotificationController.swift */; };
+		7B5386C21B42CC8500F40D90 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5386C11B42CC8500F40D90 /* GlanceController.swift */; };
+		7B5386C41B42CC8500F40D90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5386C31B42CC8500F40D90 /* Images.xcassets */; };
+		7B5386C81B42CC8500F40D90 /* CaptureTheBeacon WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 7B5386C71B42CC8500F40D90 /* CaptureTheBeacon WatchKit App.app */; };
+		7B5386D01B42CC8500F40D90 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5386CE1B42CC8500F40D90 /* Interface.storyboard */; };
+		7B5386D21B42CC8500F40D90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B5386D11B42CC8500F40D90 /* Images.xcassets */; };
+		7B5386D51B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7B5386B81B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +31,35 @@
 			remoteGlobalIDString = 7B53868E1B42CC6C00F40D90;
 			remoteInfo = CaptureTheBeacon;
 		};
+		7B5386C91B42CC8500F40D90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5386871B42CC6C00F40D90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5386C61B42CC8500F40D90;
+			remoteInfo = "CaptureTheBeacon WatchKit App";
+		};
+		7B5386D31B42CC8500F40D90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B5386871B42CC6C00F40D90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B5386B71B42CC8500F40D90;
+			remoteInfo = "CaptureTheBeacon WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7B5386DC1B42CC8500F40D90 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7B5386D51B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7B53868F1B42CC6C00F40D90 /* CaptureTheBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptureTheBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +72,17 @@
 		7B5386A41B42CC6C00F40D90 /* CaptureTheBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptureTheBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5386A91B42CC6C00F40D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B5386AA1B42CC6C00F40D90 /* CaptureTheBeaconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureTheBeaconTests.swift; sourceTree = "<group>"; };
+		7B5386B81B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CaptureTheBeacon WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5386BB1B42CC8500F40D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5386BC1B42CC8500F40D90 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		7B5386BD1B42CC8500F40D90 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		7B5386BF1B42CC8500F40D90 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		7B5386C11B42CC8500F40D90 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		7B5386C31B42CC8500F40D90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B5386C71B42CC8500F40D90 /* CaptureTheBeacon WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CaptureTheBeacon WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B5386CD1B42CC8500F40D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B5386CF1B42CC8500F40D90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		7B5386D11B42CC8500F40D90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B5386B51B42CC8500F40D90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +115,8 @@
 			children = (
 				7B5386911B42CC6C00F40D90 /* CaptureTheBeacon */,
 				7B5386A71B42CC6C00F40D90 /* CaptureTheBeaconTests */,
+				7B5386B91B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension */,
+				7B5386CB1B42CC8500F40D90 /* CaptureTheBeacon WatchKit App */,
 				7B5386901B42CC6C00F40D90 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +126,8 @@
 			children = (
 				7B53868F1B42CC6C00F40D90 /* CaptureTheBeacon.app */,
 				7B5386A41B42CC6C00F40D90 /* CaptureTheBeaconTests.xctest */,
+				7B5386B81B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension.appex */,
+				7B5386C71B42CC8500F40D90 /* CaptureTheBeacon WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +170,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7B5386B91B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B5386BD1B42CC8500F40D90 /* InterfaceController.swift */,
+				7B5386BF1B42CC8500F40D90 /* NotificationController.swift */,
+				7B5386C11B42CC8500F40D90 /* GlanceController.swift */,
+				7B5386C31B42CC8500F40D90 /* Images.xcassets */,
+				7B5386BA1B42CC8500F40D90 /* Supporting Files */,
+			);
+			path = "CaptureTheBeacon WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7B5386BA1B42CC8500F40D90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B5386BB1B42CC8500F40D90 /* Info.plist */,
+				7B5386BC1B42CC8500F40D90 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B5386CB1B42CC8500F40D90 /* CaptureTheBeacon WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				7B5386CE1B42CC8500F40D90 /* Interface.storyboard */,
+				7B5386D11B42CC8500F40D90 /* Images.xcassets */,
+				7B5386CC1B42CC8500F40D90 /* Supporting Files */,
+			);
+			path = "CaptureTheBeacon WatchKit App";
+			sourceTree = "<group>";
+		};
+		7B5386CC1B42CC8500F40D90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B5386CD1B42CC8500F40D90 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +219,12 @@
 				7B53868B1B42CC6C00F40D90 /* Sources */,
 				7B53868C1B42CC6C00F40D90 /* Frameworks */,
 				7B53868D1B42CC6C00F40D90 /* Resources */,
+				7B5386DC1B42CC8500F40D90 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7B5386D41B42CC8500F40D90 /* PBXTargetDependency */,
 			);
 			name = CaptureTheBeacon;
 			productName = CaptureTheBeacon;
@@ -150,6 +249,39 @@
 			productReference = 7B5386A41B42CC6C00F40D90 /* CaptureTheBeaconTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		7B5386B71B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5386D91B42CC8500F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeacon WatchKit Extension" */;
+			buildPhases = (
+				7B5386B41B42CC8500F40D90 /* Sources */,
+				7B5386B51B42CC8500F40D90 /* Frameworks */,
+				7B5386B61B42CC8500F40D90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B5386CA1B42CC8500F40D90 /* PBXTargetDependency */,
+			);
+			name = "CaptureTheBeacon WatchKit Extension";
+			productName = "CaptureTheBeacon WatchKit Extension";
+			productReference = 7B5386B81B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		7B5386C61B42CC8500F40D90 /* CaptureTheBeacon WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B5386D61B42CC8500F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeacon WatchKit App" */;
+			buildPhases = (
+				7B5386C51B42CC8500F40D90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CaptureTheBeacon WatchKit App";
+			productName = "CaptureTheBeacon WatchKit App";
+			productReference = 7B5386C71B42CC8500F40D90 /* CaptureTheBeacon WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +297,13 @@
 					7B5386A31B42CC6C00F40D90 = {
 						CreatedOnToolsVersion = 6.3.2;
 						TestTargetID = 7B53868E1B42CC6C00F40D90;
+					};
+					7B5386B71B42CC8500F40D90 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					7B5386C61B42CC8500F40D90 = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 42B2FPU2N2;
 					};
 				};
 			};
@@ -183,6 +322,8 @@
 			targets = (
 				7B53868E1B42CC6C00F40D90 /* CaptureTheBeacon */,
 				7B5386A31B42CC6C00F40D90 /* CaptureTheBeaconTests */,
+				7B5386B71B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension */,
+				7B5386C61B42CC8500F40D90 /* CaptureTheBeacon WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +343,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5386B61B42CC8500F40D90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5386C41B42CC8500F40D90 /* Images.xcassets in Resources */,
+				7B5386C81B42CC8500F40D90 /* CaptureTheBeacon WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B5386C51B42CC8500F40D90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5386D01B42CC8500F40D90 /* Interface.storyboard in Resources */,
+				7B5386D21B42CC8500F40D90 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +384,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7B5386B41B42CC8500F40D90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B5386C01B42CC8500F40D90 /* NotificationController.swift in Sources */,
+				7B5386BE1B42CC8500F40D90 /* InterfaceController.swift in Sources */,
+				7B5386C21B42CC8500F40D90 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +401,16 @@
 			isa = PBXTargetDependency;
 			target = 7B53868E1B42CC6C00F40D90 /* CaptureTheBeacon */;
 			targetProxy = 7B5386A51B42CC6C00F40D90 /* PBXContainerItemProxy */;
+		};
+		7B5386CA1B42CC8500F40D90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5386C61B42CC8500F40D90 /* CaptureTheBeacon WatchKit App */;
+			targetProxy = 7B5386C91B42CC8500F40D90 /* PBXContainerItemProxy */;
+		};
+		7B5386D41B42CC8500F40D90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B5386B71B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension */;
+			targetProxy = 7B5386D31B42CC8500F40D90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -250,6 +429,14 @@
 				7B53869E1B42CC6C00F40D90 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7B5386CE1B42CC8500F40D90 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B5386CF1B42CC8500F40D90 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -390,6 +577,68 @@
 			};
 			name = Release;
 		};
+		7B5386D71B42CC8500F40D90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = CaptureTheBeacon_WatchKit_Extension;
+				INFOPLIST_FILE = "CaptureTheBeacon WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		7B5386D81B42CC8500F40D90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				IBSC_MODULE = CaptureTheBeacon_WatchKit_Extension;
+				INFOPLIST_FILE = "CaptureTheBeacon WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		7B5386DA1B42CC8500F40D90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CaptureTheBeacon WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7B5386DB1B42CC8500F40D90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CaptureTheBeacon WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -415,6 +664,22 @@
 			buildConfigurations = (
 				7B5386B21B42CC6C00F40D90 /* Debug */,
 				7B5386B31B42CC6C00F40D90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B5386D61B42CC8500F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeacon WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5386D71B42CC8500F40D90 /* Debug */,
+				7B5386D81B42CC8500F40D90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B5386D91B42CC8500F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeacon WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B5386DA1B42CC8500F40D90 /* Debug */,
+				7B5386DB1B42CC8500F40D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
