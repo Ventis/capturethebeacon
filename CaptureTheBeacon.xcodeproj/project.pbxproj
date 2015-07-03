@@ -658,6 +658,7 @@
 				7B5386B01B42CC6C00F40D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B5386B11B42CC6C00F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +667,7 @@
 				7B5386B31B42CC6C00F40D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B5386D61B42CC8500F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeacon WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -674,6 +676,7 @@
 				7B5386D81B42CC8500F40D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B5386D91B42CC8500F40D90 /* Build configuration list for PBXNativeTarget "CaptureTheBeacon WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +685,7 @@
 				7B5386DB1B42CC8500F40D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
