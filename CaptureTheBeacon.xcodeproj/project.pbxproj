@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B10EC251B4ABDAE00862E6D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10EC241B4ABDAE00862E6D /* RegisterViewController.swift */; };
+		7B10EC271B4ABE6B00862E6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10EC261B4ABE6B00862E6D /* LoginViewController.swift */; };
 		7B5386951B42CC6C00F40D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5386941B42CC6C00F40D90 /* AppDelegate.swift */; };
 		7B5386971B42CC6C00F40D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5386961B42CC6C00F40D90 /* ViewController.swift */; };
 		7B53869A1B42CC6C00F40D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B5386981B42CC6C00F40D90 /* Main.storyboard */; };
@@ -264,6 +266,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B10EC241B4ABDAE00862E6D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7B10EC261B4ABE6B00862E6D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B53868F1B42CC6C00F40D90 /* CaptureTheBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptureTheBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B5386931B42CC6C00F40D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B5386941B42CC6C00F40D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -541,7 +545,9 @@
 			children = (
 				7B5386941B42CC6C00F40D90 /* AppDelegate.swift */,
 				7B5386961B42CC6C00F40D90 /* ViewController.swift */,
+				7B10EC241B4ABDAE00862E6D /* RegisterViewController.swift */,
 				7B5386981B42CC6C00F40D90 /* Main.storyboard */,
+				7B10EC261B4ABE6B00862E6D /* LoginViewController.swift */,
 				7B53869B1B42CC6C00F40D90 /* Images.xcassets */,
 				7B53869D1B42CC6C00F40D90 /* LaunchScreen.xib */,
 				7B5386921B42CC6C00F40D90 /* Supporting Files */,
@@ -1187,6 +1193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B10EC271B4ABE6B00862E6D /* LoginViewController.swift in Sources */,
+				7B10EC251B4ABDAE00862E6D /* RegisterViewController.swift in Sources */,
 				7B5386971B42CC6C00F40D90 /* ViewController.swift in Sources */,
 				7B5386951B42CC6C00F40D90 /* AppDelegate.swift in Sources */,
 			);
