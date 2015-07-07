@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
     
     //Handles logout
     @IBAction func logoutTapped(segue:UIStoryboardSegue) {
+        self.emailField.text = ""
         self.passwordField.text = ""
     }
     
