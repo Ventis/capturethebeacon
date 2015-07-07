@@ -112,45 +112,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anu-tw-8ig">
-                                <rect key="frame" x="16" y="104" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeL-h4-PfZ">
-                                <rect key="frame" x="16" y="154" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="luh-GF-av7">
-                                <rect key="frame" x="16" y="205" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9R-aJ-GZC">
-                                <rect key="frame" x="16" y="255" width="568" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTQ-I4-GA2">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="599-OU-ape" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="536"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anu-tw-8ig">
+                                                <rect key="frame" x="20" y="40" width="568" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CeL-h4-PfZ">
+                                                <rect key="frame" x="20" y="90" width="568" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="luh-GF-av7">
+                                                <rect key="frame" x="20" y="141" width="568" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9R-aJ-GZC">
+                                                <rect key="frame" x="20" y="191" width="568" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="luh-GF-av7" firstAttribute="leading" secondItem="599-OU-ape" secondAttribute="leading" constant="20" id="Bgn-oM-rk5"/>
+                                            <constraint firstItem="anu-tw-8ig" firstAttribute="leading" secondItem="599-OU-ape" secondAttribute="leading" constant="20" id="CKz-Dr-OU3"/>
+                                            <constraint firstAttribute="trailing" secondItem="anu-tw-8ig" secondAttribute="trailing" constant="20" id="DCz-hH-N4B"/>
+                                            <constraint firstAttribute="trailing" secondItem="luh-GF-av7" secondAttribute="trailing" constant="20" id="Iaq-Qa-kn4"/>
+                                            <constraint firstAttribute="trailing" secondItem="N9R-aJ-GZC" secondAttribute="trailing" constant="20" id="MaV-Ae-NYN"/>
+                                            <constraint firstAttribute="centerX" secondItem="anu-tw-8ig" secondAttribute="centerX" id="Nja-y9-NcF"/>
+                                            <constraint firstItem="anu-tw-8ig" firstAttribute="top" secondItem="599-OU-ape" secondAttribute="top" constant="30" id="Oh0-lr-Neq"/>
+                                            <constraint firstAttribute="centerX" secondItem="luh-GF-av7" secondAttribute="centerX" id="S5m-kY-1AU"/>
+                                            <constraint firstItem="CeL-h4-PfZ" firstAttribute="leading" secondItem="599-OU-ape" secondAttribute="leading" constant="20" id="XN8-ak-jk0"/>
+                                            <constraint firstItem="luh-GF-av7" firstAttribute="top" secondItem="CeL-h4-PfZ" secondAttribute="bottom" constant="20" id="YSY-zs-pEm"/>
+                                            <constraint firstItem="N9R-aJ-GZC" firstAttribute="leading" secondItem="599-OU-ape" secondAttribute="leading" constant="20" id="eCc-gA-lmr"/>
+                                            <constraint firstAttribute="centerX" secondItem="CeL-h4-PfZ" secondAttribute="centerX" id="gAk-Ro-bLJ"/>
+                                            <constraint firstItem="N9R-aJ-GZC" firstAttribute="top" secondItem="luh-GF-av7" secondAttribute="bottom" constant="20" id="hZg-Fl-VHK"/>
+                                            <constraint firstItem="CeL-h4-PfZ" firstAttribute="top" secondItem="anu-tw-8ig" secondAttribute="bottom" constant="20" id="i8T-cP-sqr"/>
+                                            <constraint firstAttribute="centerX" secondItem="N9R-aJ-GZC" secondAttribute="centerX" id="mbF-bc-Vsj"/>
+                                            <constraint firstAttribute="trailing" secondItem="CeL-h4-PfZ" secondAttribute="trailing" constant="20" id="nQB-i8-U3S"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="anu-tw-8ig" secondAttribute="centerX" id="OSI-xc-NmE"/>
-                            <constraint firstItem="N9R-aJ-GZC" firstAttribute="trailing" secondItem="OJZ-ph-UlI" secondAttribute="trailingMargin" id="PFx-sX-xb0"/>
-                            <constraint firstItem="anu-tw-8ig" firstAttribute="trailing" secondItem="OJZ-ph-UlI" secondAttribute="trailingMargin" id="SXl-hb-v6q"/>
-                            <constraint firstItem="CeL-h4-PfZ" firstAttribute="trailing" secondItem="OJZ-ph-UlI" secondAttribute="trailingMargin" id="Tix-di-Vwi"/>
-                            <constraint firstItem="N9R-aJ-GZC" firstAttribute="leading" secondItem="OJZ-ph-UlI" secondAttribute="leadingMargin" id="Ubp-Cr-yHh"/>
-                            <constraint firstItem="luh-GF-av7" firstAttribute="leading" secondItem="OJZ-ph-UlI" secondAttribute="leadingMargin" id="UfV-u1-RKg"/>
-                            <constraint firstItem="luh-GF-av7" firstAttribute="top" secondItem="CeL-h4-PfZ" secondAttribute="bottom" constant="21" id="V8I-bH-fb8"/>
-                            <constraint firstItem="anu-tw-8ig" firstAttribute="top" secondItem="qnd-J4-MbK" secondAttribute="bottom" constant="40" id="WfT-Bg-6ZK"/>
-                            <constraint firstItem="anu-tw-8ig" firstAttribute="leading" secondItem="OJZ-ph-UlI" secondAttribute="leadingMargin" id="ZF6-cK-oOz"/>
-                            <constraint firstAttribute="centerX" secondItem="luh-GF-av7" secondAttribute="centerX" id="fjl-xv-fQI"/>
-                            <constraint firstAttribute="centerX" secondItem="N9R-aJ-GZC" secondAttribute="centerX" id="iNt-bX-zm0"/>
-                            <constraint firstItem="N9R-aJ-GZC" firstAttribute="top" secondItem="luh-GF-av7" secondAttribute="bottom" constant="20" id="kq3-pP-Wzg"/>
-                            <constraint firstItem="CeL-h4-PfZ" firstAttribute="leading" secondItem="OJZ-ph-UlI" secondAttribute="leadingMargin" id="tt7-8B-amB"/>
-                            <constraint firstAttribute="centerX" secondItem="CeL-h4-PfZ" secondAttribute="centerX" id="vC5-At-R4P"/>
-                            <constraint firstItem="CeL-h4-PfZ" firstAttribute="top" secondItem="anu-tw-8ig" secondAttribute="bottom" constant="20" id="wH8-U8-cpB"/>
-                            <constraint firstItem="luh-GF-av7" firstAttribute="trailing" secondItem="OJZ-ph-UlI" secondAttribute="trailingMargin" id="wZz-RR-O3h"/>
+                            <constraint firstItem="iTQ-I4-GA2" firstAttribute="leading" secondItem="OJZ-ph-UlI" secondAttribute="leadingMargin" id="JfG-z8-TTR"/>
+                            <constraint firstItem="g6k-cc-Z6A" firstAttribute="top" secondItem="iTQ-I4-GA2" secondAttribute="bottom" id="dY2-Vo-XCz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iTQ-I4-GA2" secondAttribute="trailing" id="jzD-BI-RfY"/>
+                            <constraint firstItem="iTQ-I4-GA2" firstAttribute="top" secondItem="qnd-J4-MbK" secondAttribute="bottom" id="wdE-Kj-LLZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create a new player" id="MTf-u0-b07">
@@ -161,6 +178,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="EaV-Ka-hMs"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="599-OU-ape" id="Ctq-ID-gEY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CSk-Tg-X8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="vOz-69-0MB" userLabel="Exit" sceneMemberID="exit"/>

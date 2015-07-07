@@ -9,11 +9,34 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var contentView: UIView!;
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let leftConstraint = NSLayoutConstraint(
+            item:self.contentView,
+            attribute:NSLayoutAttribute.Leading,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self.view,
+            attribute:NSLayoutAttribute.Left,
+            multiplier:1.0,
+            constant:0
+        );
+        self.view.addConstraint(leftConstraint);
+        
+        let rightConstraint = NSLayoutConstraint(
+            item:self.contentView,
+            attribute:NSLayoutAttribute.Trailing,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self.view,
+            attribute:NSLayoutAttribute.Right,
+            multiplier:1.0,
+            constant:0
+        );
+        self.view.addConstraint(rightConstraint);
     }
 
     override func didReceiveMemoryWarning() {
