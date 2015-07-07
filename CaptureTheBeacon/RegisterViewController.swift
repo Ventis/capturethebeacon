@@ -21,7 +21,9 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func saveRegistration(segue:UIStoryboardSegue) {
+        
+    }
     /*
     // MARK: - Navigation
 

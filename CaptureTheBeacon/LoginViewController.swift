@@ -21,6 +21,9 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func registrationCancelled(segue:UIStoryboardSegue) {
+        
+    }
 
     /*
     // MARK: - Navigation
