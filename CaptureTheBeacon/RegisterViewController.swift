@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class RegisterViewController: UIViewController {
     
-    @IBOutlet weak var contentView: UIView!;
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var nicknameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,28 @@ class RegisterViewController: UIViewController {
             constant:0
         );
         self.view.addConstraint(rightConstraint);
+        
+        let top = NSLayoutConstraint(
+            item:self.contentView,
+            attribute:NSLayoutAttribute.Top,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self.view,
+            attribute:NSLayoutAttribute.Top,
+            multiplier:1.0,
+            constant:60
+        );
+        self.view.addConstraint(top);
+        
+        let bottom = NSLayoutConstraint(
+            item:self.contentView,
+            attribute:NSLayoutAttribute.Bottom,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self.view,
+            attribute:NSLayoutAttribute.Bottom,
+            multiplier:1.0,
+            constant:0
+        );
+        self.view.addConstraint(bottom);
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,17 +70,36 @@ class RegisterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func saveRegistration(segue:UIStoryboardSegue) {
-        
+    
+    //Register new player
+    @IBAction func register(sender: AnyObject) {
+            var user = PFUser()
+            user.username = self.emailField.text
+            user.password = self.passwordField.text
+            user.email = self.emailField.text
+            user["nick"] = self.nicknameField.text
+            
+            user.signUpInBackgroundWithBlock {
+                (succeeded: Bool, error: NSError?) -> Void in
+                if let error = error {
+                    let errorString = error.userInfo?["error"] as? String
+                    var alert = UIAlertController(title: "Registration failed", message: errorString, preferredStyle: UIAlertControllerStyle.Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+                } else {
+                    // Hooray! Let them use the app now.
+                    self.performSegueWithIdentifier("registerTapped", sender: self)
+                }
+            }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "registerTapped") {
+            var svc = segue.destinationViewController as! LoginViewController;
+            
+            svc.email = self.emailField.text
+            
+        }
     }
-    */
 
 }

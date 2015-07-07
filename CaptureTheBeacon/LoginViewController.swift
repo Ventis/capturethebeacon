@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
+    
+    var email:String!
 
-    @IBOutlet weak var contentView: UIView!;
+    @IBOutlet weak var contentView: UIView!
+    
+    @IBOutlet weak var emailField: UITextField!
+    
+    @IBOutlet weak var passwordField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        
+        var currentUser = PFUser.currentUser();
+        if currentUser != nil {
+            self.performSegueWithIdentifier("loggedIn", sender:self)
+        }
         
         // Do any additional setup after loading the view.
         let leftConstraint = NSLayoutConstraint(
@@ -24,7 +36,7 @@ class LoginViewController: UIViewController {
             attribute:NSLayoutAttribute.Left,
             multiplier:1.0,
             constant:0
-        );
+        )
         self.view.addConstraint(leftConstraint);
         
         let rightConstraint = NSLayoutConstraint(
@@ -35,8 +47,8 @@ class LoginViewController: UIViewController {
             attribute:NSLayoutAttribute.Right,
             multiplier:1.0,
             constant:0
-        );
-        self.view.addConstraint(rightConstraint);
+        )
+        self.view.addConstraint(rightConstraint)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,18 +56,39 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Handles cancelled registration
     @IBAction func registrationCancelled(segue:UIStoryboardSegue) {
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    //Handles registration
+    @IBAction func registerTapped(segue:UIStoryboardSegue) {
+        self.emailField.text = email
     }
+    
+    //Handles logout
+    @IBAction func logoutTapped(segue:UIStoryboardSegue) {
+        self.passwordField.text = ""
+    }
+    
+    
+    /*
+    Login user
     */
+    @IBAction func loginTapped(sender: AnyObject) {
+        PFUser.logInWithUsernameInBackground(self.emailField.text, password: self.passwordField.text) {
+            (user: PFUser?, error:NSError?) -> Void in
+            if user != nil {
+                //Success
+                self.performSegueWithIdentifier("loggedIn", sender: self)
+            } else {
+                //Failed
+                var alert = UIAlertController(title: "Login", message: "Failed", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+    }
+
 
 }
