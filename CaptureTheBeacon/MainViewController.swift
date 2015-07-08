@@ -22,9 +22,10 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.currentUser = PFUser.currentUser()!
-        //self.playerLabel.text = self.currentUser["nick"]
-        //let teamName = "team " + currentUser["team"] as String
-        //self.playerTeam.text = teamName
+        self.playerLabel.text = self.currentUser["nick"] as? String
+        var teamName = "team "
+        teamName += currentUser["team"] as! String
+        self.playerTeam.text = teamName
         
         switch currentUser["team"] as! String {
             case "red":
