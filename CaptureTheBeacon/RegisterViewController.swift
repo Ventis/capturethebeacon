@@ -78,7 +78,7 @@ class RegisterViewController: UIViewController {
         user.password = self.passwordField.text
         user.email = self.emailField.text
         user["nick"] = self.nicknameField.text
-        user["stamina"] = 60
+        user["stamina"] = 100
         
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in

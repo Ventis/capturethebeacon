@@ -135,23 +135,30 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stamina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Ij-cwG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stamina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Ij-cwG" userLabel="stamina">
                                                 <rect key="frame" x="20" y="100" width="63" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Gxb-zL-2Ac">
-                                                <rect key="frame" x="20" y="128" width="551" height="2.5"/>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gxb-zL-2Ac">
+                                                <rect key="frame" x="20" y="128" width="551" height="2"/>
                                                 <color key="progressTintColor" red="0.1979359537" green="0.57295967130000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="trackTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-8S-bgQ" userLabel="staminaLabel">
+                                                <rect key="frame" x="279" y="142" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="s02-Kf-XLN" firstAttribute="leading" secondItem="APc-Ij-cwG" secondAttribute="trailing" constant="46" id="3Aa-x9-nOF"/>
                                             <constraint firstItem="APc-Ij-cwG" firstAttribute="leading" secondItem="E6w-vP-REJ" secondAttribute="leading" constant="20" id="7mU-I0-evr"/>
                                             <constraint firstItem="Gxb-zL-2Ac" firstAttribute="leading" secondItem="E6w-vP-REJ" secondAttribute="leading" constant="20" id="9JO-mw-gTu"/>
                                             <constraint firstItem="aW1-Lp-B9M" firstAttribute="top" secondItem="E6w-vP-REJ" secondAttribute="top" constant="60" id="AC2-yb-a8n"/>
+                                            <constraint firstAttribute="centerX" secondItem="rmh-8S-bgQ" secondAttribute="centerX" id="ESg-ca-HIr"/>
                                             <constraint firstItem="Gxb-zL-2Ac" firstAttribute="top" secondItem="APc-Ij-cwG" secondAttribute="bottom" constant="10" id="HdZ-op-CX1"/>
                                             <constraint firstAttribute="trailing" secondItem="Gxb-zL-2Ac" secondAttribute="trailing" constant="20" id="OvP-mQ-sJ8"/>
                                             <constraint firstAttribute="centerX" secondItem="Gxb-zL-2Ac" secondAttribute="centerX" id="P6X-wz-N1h"/>
@@ -159,6 +166,7 @@
                                             <constraint firstAttribute="centerX" secondItem="aW1-Lp-B9M" secondAttribute="centerX" id="Pze-fl-Dio"/>
                                             <constraint firstAttribute="centerX" secondItem="s02-Kf-XLN" secondAttribute="centerX" id="QPR-hE-Rdp"/>
                                             <constraint firstItem="s02-Kf-XLN" firstAttribute="top" secondItem="aW1-Lp-B9M" secondAttribute="bottom" constant="20" id="xBe-li-6Js"/>
+                                            <constraint firstItem="rmh-8S-bgQ" firstAttribute="top" secondItem="Gxb-zL-2Ac" secondAttribute="bottom" constant="10" id="yxP-Bs-RGQ"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -192,6 +200,7 @@
                         <outlet property="playerLabel" destination="aW1-Lp-B9M" id="mIs-eD-Wid"/>
                         <outlet property="playerTeam" destination="s02-Kf-XLN" id="C3c-sr-B6b"/>
                         <outlet property="staminaBar" destination="Gxb-zL-2Ac" id="ymw-XB-VdY"/>
+                        <outlet property="staminaLabel" destination="rmh-8S-bgQ" id="vTc-2y-2kJ"/>
                         <segue destination="zoj-LF-7Jn" kind="unwind" identifier="loggedOut" unwindAction="logoutTapped:" id="dlv-PH-03F"/>
                     </connections>
                 </viewController>

@@ -17,6 +17,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var playerTeam: UILabel!
     @IBOutlet weak var staminaBar: UIProgressView!
+    @IBOutlet weak var staminaLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,8 @@ class MainViewController: UIViewController {
         }
         var stamina = currentUser["stamina"] as? Int != nil ? currentUser["stamina"] as! Int : 0
         self.staminaBar.progress = Float(stamina)/100
+        self.staminaLabel.text = String(stamina)+"/100 capture points left"
+        
         
         let leftConstraint = NSLayoutConstraint(
             item:self.contentView,
