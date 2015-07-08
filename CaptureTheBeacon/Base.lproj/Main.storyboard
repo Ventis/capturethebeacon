@@ -135,14 +135,36 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Stamina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APc-Ij-cwG">
+                                                <rect key="frame" x="20" y="100" width="63" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="Gxb-zL-2Ac">
+                                                <rect key="frame" x="20" y="128" width="551" height="2.5"/>
+                                                <color key="progressTintColor" red="0.1979359537" green="0.57295967130000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="trackTintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </progressView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="s02-Kf-XLN" firstAttribute="leading" secondItem="APc-Ij-cwG" secondAttribute="trailing" constant="46" id="3Aa-x9-nOF"/>
+                                            <constraint firstItem="APc-Ij-cwG" firstAttribute="leading" secondItem="E6w-vP-REJ" secondAttribute="leading" constant="20" id="7mU-I0-evr"/>
+                                            <constraint firstItem="Gxb-zL-2Ac" firstAttribute="leading" secondItem="E6w-vP-REJ" secondAttribute="leading" constant="20" id="9JO-mw-gTu"/>
                                             <constraint firstItem="aW1-Lp-B9M" firstAttribute="top" secondItem="E6w-vP-REJ" secondAttribute="top" constant="60" id="AC2-yb-a8n"/>
+                                            <constraint firstItem="Gxb-zL-2Ac" firstAttribute="top" secondItem="APc-Ij-cwG" secondAttribute="bottom" constant="10" id="HdZ-op-CX1"/>
+                                            <constraint firstAttribute="trailing" secondItem="Gxb-zL-2Ac" secondAttribute="trailing" constant="20" id="OvP-mQ-sJ8"/>
+                                            <constraint firstAttribute="centerX" secondItem="Gxb-zL-2Ac" secondAttribute="centerX" id="P6X-wz-N1h"/>
+                                            <constraint firstItem="APc-Ij-cwG" firstAttribute="top" secondItem="s02-Kf-XLN" secondAttribute="bottom" constant="20" id="PxS-bD-ca7"/>
                                             <constraint firstAttribute="centerX" secondItem="aW1-Lp-B9M" secondAttribute="centerX" id="Pze-fl-Dio"/>
                                             <constraint firstAttribute="centerX" secondItem="s02-Kf-XLN" secondAttribute="centerX" id="QPR-hE-Rdp"/>
                                             <constraint firstItem="s02-Kf-XLN" firstAttribute="top" secondItem="aW1-Lp-B9M" secondAttribute="bottom" constant="20" id="xBe-li-6Js"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3Aa-x9-nOF"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                             </scrollView>
@@ -169,6 +191,7 @@
                         <outlet property="contentView" destination="E6w-vP-REJ" id="NLY-qG-5vB"/>
                         <outlet property="playerLabel" destination="aW1-Lp-B9M" id="mIs-eD-Wid"/>
                         <outlet property="playerTeam" destination="s02-Kf-XLN" id="C3c-sr-B6b"/>
+                        <outlet property="staminaBar" destination="Gxb-zL-2Ac" id="ymw-XB-VdY"/>
                         <segue destination="zoj-LF-7Jn" kind="unwind" identifier="loggedOut" unwindAction="logoutTapped:" id="dlv-PH-03F"/>
                     </connections>
                 </viewController>

@@ -73,24 +73,25 @@ class RegisterViewController: UIViewController {
     
     //Register new player
     @IBAction func register(sender: AnyObject) {
-            var user = PFUser()
-            user.username = self.emailField.text
-            user.password = self.passwordField.text
-            user.email = self.emailField.text
-            user["nick"] = self.nicknameField.text
-            
-            user.signUpInBackgroundWithBlock {
-                (succeeded: Bool, error: NSError?) -> Void in
-                if let error = error {
-                    let errorString = error.userInfo?["error"] as? String
-                    var alert = UIAlertController(title: "Registration failed", message: errorString, preferredStyle: UIAlertControllerStyle.Alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-                    self.presentViewController(alert, animated: true, completion: nil)
-                } else {
-                    // Hooray! Let them use the app now.
-                    self.performSegueWithIdentifier("registerTapped", sender: self)
-                }
+        var user = PFUser()
+        user.username = self.emailField.text
+        user.password = self.passwordField.text
+        user.email = self.emailField.text
+        user["nick"] = self.nicknameField.text
+        user["stamina"] = 60
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            if let error = error {
+                let errorString = error.userInfo?["error"] as? String
+                var alert = UIAlertController(title: "Registration failed", message: errorString, preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                // Hooray! Let them use the app now.
+                self.performSegueWithIdentifier("registerTapped", sender: self)
             }
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

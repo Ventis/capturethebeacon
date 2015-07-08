@@ -16,25 +16,33 @@ class MainViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var playerLabel: UILabel!
     @IBOutlet weak var playerTeam: UILabel!
+    @IBOutlet weak var staminaBar: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.currentUser = PFUser.currentUser()!
-        self.playerLabel.text = self.currentUser["nick"] as? String
-        var teamName = "team "
+        currentUser.fetch()
+
+        self.playerLabel.text = currentUser["nick"] as? String
+        var teamName = "Team "
         teamName += currentUser["team"] as! String
         self.playerTeam.text = teamName
         
         switch currentUser["team"] as! String {
             case "red":
                 self.playerTeam.textColor = UIColor.redColor()
+                self.staminaBar.progressTintColor = UIColor.redColor()
             case "blue":
                 self.playerTeam.textColor = UIColor.blueColor()
+                self.staminaBar.progressTintColor = UIColor.blueColor()
             default:
                 self.playerTeam.textColor = UIColor.blackColor()
+                self.staminaBar.progressTintColor = UIColor.grayColor()
         }
+        var stamina = currentUser["stamina"] as? Int != nil ? currentUser["stamina"] as! Int : 0
+        self.staminaBar.progress = Float(stamina)/100
         
         let leftConstraint = NSLayoutConstraint(
             item:self.contentView,
@@ -58,6 +66,17 @@ class MainViewController: UIViewController {
         )
         self.view.addConstraint(rightConstraint)
         
+        let topConstraint = NSLayoutConstraint(
+            item:self.contentView,
+            attribute:NSLayoutAttribute.Top,
+            relatedBy:NSLayoutRelation.Equal,
+            toItem:self.view,
+            attribute:NSLayoutAttribute.Top,
+            multiplier:1.0,
+            constant:65
+        )
+        self.view.addConstraint(topConstraint)
+
     }
 
     override func didReceiveMemoryWarning() {
