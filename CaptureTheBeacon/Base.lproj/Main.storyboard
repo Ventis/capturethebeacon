@@ -117,7 +117,45 @@
                     <view key="view" contentMode="scaleToFill" id="6zb-CI-cn0">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fqz-bf-Wex">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E6w-vP-REJ" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="65" width="600" height="600"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW1-Lp-B9M" userLabel="playerName">
+                                                <rect key="frame" x="279" y="55" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s02-Kf-XLN" userLabel="playerTeam">
+                                                <rect key="frame" x="279" y="84" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="aW1-Lp-B9M" firstAttribute="top" secondItem="E6w-vP-REJ" secondAttribute="top" constant="60" id="AC2-yb-a8n"/>
+                                            <constraint firstAttribute="centerX" secondItem="aW1-Lp-B9M" secondAttribute="centerX" id="Pze-fl-Dio"/>
+                                            <constraint firstAttribute="centerX" secondItem="s02-Kf-XLN" secondAttribute="centerX" id="QPR-hE-Rdp"/>
+                                            <constraint firstItem="s02-Kf-XLN" firstAttribute="top" secondItem="aW1-Lp-B9M" secondAttribute="bottom" constant="20" id="xBe-li-6Js"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fqz-bf-Wex" firstAttribute="top" secondItem="6zb-CI-cn0" secondAttribute="topMargin" id="0yf-hV-TPg"/>
+                            <constraint firstAttribute="centerY" secondItem="fqz-bf-Wex" secondAttribute="centerY" id="Iz3-Gw-C7c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fqz-bf-Wex" secondAttribute="trailing" id="QPv-cn-a2a"/>
+                            <constraint firstAttribute="centerX" secondItem="fqz-bf-Wex" secondAttribute="centerX" id="RaH-p1-oY6"/>
+                            <constraint firstItem="nz3-EA-bAh" firstAttribute="top" secondItem="fqz-bf-Wex" secondAttribute="bottom" id="dc7-CK-Ft5"/>
+                            <constraint firstItem="fqz-bf-Wex" firstAttribute="leading" secondItem="6zb-CI-cn0" secondAttribute="leadingMargin" id="g87-ga-eaM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Capture the beacon" id="LTn-jl-coc">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="1qo-Fl-33c">
@@ -125,8 +163,12 @@
                                 <action selector="logout:" destination="IPA-rF-ulg" id="RlF-G2-zny"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Capture" id="lqD-m3-xJR"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="contentView" destination="E6w-vP-REJ" id="NLY-qG-5vB"/>
+                        <outlet property="playerLabel" destination="aW1-Lp-B9M" id="mIs-eD-Wid"/>
+                        <outlet property="playerTeam" destination="s02-Kf-XLN" id="C3c-sr-B6b"/>
                         <segue destination="zoj-LF-7Jn" kind="unwind" identifier="loggedOut" unwindAction="logoutTapped:" id="dlv-PH-03F"/>
                     </connections>
                 </viewController>
