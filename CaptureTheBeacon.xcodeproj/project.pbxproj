@@ -279,6 +279,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		442BA18E1B4D080C003384A2 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		442BA18F1B4D080C003384A2 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		442BA1901B4D080C003384A2 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		442BA1911B4D080C003384A2 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		442BA1921B4D080C003384A2 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		442BA1931B4D080C003384A2 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		442BA1941B4D080C003384A2 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		442BA1951B4D080C003384A2 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		442BA1961B4D080C003384A2 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		442BA1971B4D080C003384A2 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		442BA1981B4D080C003384A2 /* SourceSansPro-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.ttf"; sourceTree = "<group>"; };
+		442BA1991B4D080C003384A2 /* SourceSansPro-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		7B10EC241B4ABDAE00862E6D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7B10EC261B4ABE6B00862E6D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7B53868F1B42CC6C00F40D90 /* CaptureTheBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaptureTheBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -557,6 +569,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		442BA19A1B4D0814003384A2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				442BA18E1B4D080C003384A2 /* SourceSansPro-Black.ttf */,
+				442BA18F1B4D080C003384A2 /* SourceSansPro-BlackItalic.ttf */,
+				442BA1901B4D080C003384A2 /* SourceSansPro-Bold.ttf */,
+				442BA1911B4D080C003384A2 /* SourceSansPro-BoldItalic.ttf */,
+				442BA1921B4D080C003384A2 /* SourceSansPro-ExtraLight.ttf */,
+				442BA1931B4D080C003384A2 /* SourceSansPro-ExtraLightItalic.ttf */,
+				442BA1941B4D080C003384A2 /* SourceSansPro-Italic.ttf */,
+				442BA1951B4D080C003384A2 /* SourceSansPro-Light.ttf */,
+				442BA1961B4D080C003384A2 /* SourceSansPro-LightItalic.ttf */,
+				442BA1971B4D080C003384A2 /* SourceSansPro-Regular.ttf */,
+				442BA1981B4D080C003384A2 /* SourceSansPro-Semibold.ttf */,
+				442BA1991B4D080C003384A2 /* SourceSansPro-SemiboldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		7B5386861B42CC6C00F40D90 = {
 			isa = PBXGroup;
 			children = (
@@ -566,6 +597,7 @@
 				7B5386B91B42CC8500F40D90 /* CaptureTheBeacon WatchKit Extension */,
 				7B5386CB1B42CC8500F40D90 /* CaptureTheBeacon WatchKit App */,
 				7B5386901B42CC6C00F40D90 /* Products */,
+				442BA19A1B4D0814003384A2 /* Fonts */,
 			);
 			sourceTree = "<group>";
 		};
